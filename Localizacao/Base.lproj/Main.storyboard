@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WXS-jm-Umf">
+                                <rect key="frame" x="-4" y="0.0" width="608" height="570"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="568" id="bDX-g1-idt"/>
+                                    <constraint firstAttribute="height" constant="500" id="lav-MX-ReZ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bDX-g1-idt"/>
+                                        <exclude reference="lav-MX-ReZ"/>
+                                    </mask>
+                                </variation>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsx-g5-c99">
+                                <rect key="frame" x="506" y="569" width="30" height="30"/>
+                                <state key="normal" title="Pin">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t5h-wx-ftG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ttc-rH-Liw">
+                                <rect key="frame" x="38" y="569" width="145" height="30"/>
+                                <state key="normal" title="Atualizar Localização">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="atualizar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZEh-z1-yfC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ttc-rH-Liw" secondAttribute="bottom" constant="1" id="0AR-0K-7Ha"/>
+                            <constraint firstAttribute="centerX" secondItem="WXS-jm-Umf" secondAttribute="centerX" id="9CE-Ku-WcH"/>
+                            <constraint firstAttribute="centerY" secondItem="WXS-jm-Umf" secondAttribute="centerY" id="Bdi-ra-Rno"/>
+                            <constraint firstItem="Ttc-rH-Liw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="KAz-6f-P9q"/>
+                            <constraint firstItem="WXS-jm-Umf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-20" id="Klg-cF-svv"/>
+                            <constraint firstItem="WXS-jm-Umf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="L5s-Yo-bbC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ttc-rH-Liw" secondAttribute="bottom" constant="1" id="MDC-TC-X38"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qsx-g5-c99" secondAttribute="trailing" constant="48" id="Nep-P1-r2S"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qsx-g5-c99" secondAttribute="bottom" constant="1" id="ROa-a3-3fL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qsx-g5-c99" secondAttribute="bottom" constant="1" id="YHr-eB-hQD"/>
+                            <constraint firstItem="Ttc-rH-Liw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="YOi-p2-rhY"/>
+                            <constraint firstItem="WXS-jm-Umf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="azd-9h-1WL"/>
+                            <constraint firstItem="Ttc-rH-Liw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="549" id="bda-ZE-d3O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WXS-jm-Umf" secondAttribute="trailing" constant="-20" id="enn-XR-axG"/>
+                            <constraint firstItem="Qsx-g5-c99" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="549" id="pVu-aa-RCg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WXS-jm-Umf" secondAttribute="bottom" constant="30" id="uiq-Xv-pbo"/>
+                            <constraint firstItem="WXS-jm-Umf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="w4L-Cf-0tJ"/>
+                            <constraint firstItem="WXS-jm-Umf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="yHN-CW-QMI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WXS-jm-Umf" secondAttribute="bottom" id="z0y-tO-xek"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9CE-Ku-WcH"/>
+                                <exclude reference="Bdi-ra-Rno"/>
+                                <exclude reference="Klg-cF-svv"/>
+                                <exclude reference="L5s-Yo-bbC"/>
+                                <exclude reference="azd-9h-1WL"/>
+                                <exclude reference="KAz-6f-P9q"/>
+                                <exclude reference="z0y-tO-xek"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="WXS-jm-Umf" id="AKO-3z-B6o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
