@@ -11,10 +11,6 @@
 #import <MapKit/MapKit.h>
 
 @interface ViewController : UIViewController
-{
-    NSArray* routes;
-    BOOL isUpdatingRoutes;
-}
 
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 @property (retain) CLLocationManager *locationManager;
@@ -23,8 +19,6 @@
 
 - (IBAction)atualizar:(id)sender;
 - (IBAction)pin:(id)sender;
-
--(void) showRouteFrom: (MKAnnotation*) f to:(MKAnnotation*) t;
 
 @end
 
